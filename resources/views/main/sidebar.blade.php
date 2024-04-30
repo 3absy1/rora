@@ -4,7 +4,7 @@
         <div class="navbar-brand-box">
             <a href="index" class="logo logo-dark">
                 <span class="logo-sm">
-                    <img src="{{ URL::asset('build/images/logo-sm.png') }}" alt="" height="22">
+                    <img src="{{ URL::asset('build/images/rora.png') }}" alt="" height="22">
                 </span>
                 <span class="logo-lg">
                     <img src="{{ URL::asset('build/images/rora.png') }}" alt="" height="67" >
@@ -12,7 +12,7 @@
             </a>
             <a href="dashboard" class="logo logo-light">
                 <span class="logo-sm">
-                    <img src="{{ URL::asset('build/images/logo-sm.png') }}" alt="" height="100">
+                    <img src="{{ URL::asset('build/images/rora.png') }}" alt="" height="100">
                 </span>
                 <span class="logo-lg">
                     <img src="{{ URL::asset('build/images/rora.png') }}" alt="" height="67" class="mt-10">

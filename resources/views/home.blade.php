@@ -20,6 +20,17 @@ Analytics
 @endcomponent
 
 <div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Basic Bar Chart</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <div id="bar_chart" data-colors='["--tb-success"]' class="apex-charts" dir="ltr"></div>
+            </div><!-- end card-body -->
+        </div><!-- end card -->
+    </div>
     <div class="col-xl-3 col-sm-6">
         <div class="card">
             <div class="card-body">
@@ -28,6 +39,9 @@ Analytics
                 <div class="row mt-4 align-items-end">
                     <div class="col-lg-6">
                         <h3 class="mb-4"><span class="counter-value" data-target=" {{count($clients)}}"> 0</span> client </h3>
+                    </div>
+                              <div class="col-lg-6">
+                        <div id="visti_duration_chart" data-colors='["--tb-primary", "--tb-secondary"]' class="apex-charts m-n3 mt-n4" dir="ltr"></div>
                     </div>
                     <div class="d-flex align-items-center gap-2">
                             @if (count($clients) > $previousCount )
@@ -40,9 +54,7 @@ Analytics
                         </h5>
                         <p class="text-muted mb-0">than tomorrow</p>
                     </div>
-                    {{-- <div class="col-lg-6">
-                        <div id="visti_duration_chart" data-colors='["--tb-primary", "--tb-secondary"]' class="apex-charts m-n3 mt-n4" dir="ltr"></div>
-                    </div> --}}
+
                 </div>
             </div>
         </div>
@@ -833,6 +845,7 @@ Analytics
       }
     });
     </script>
+
 @endsection
 
 
