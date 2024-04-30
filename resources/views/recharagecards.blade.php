@@ -1,5 +1,5 @@
 @extends('main.master')
-@section('title') @lang('translation.datatables') @endsection
+@section('title') Recharage Card  @endsection
 @section('css')
 <!--datatable css-->
 <link href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" rel="stylesheet" type="text/css" />
@@ -17,7 +17,7 @@
     <div class="col-lg-12">
         <div class="card">
             <div class="card-header">
-                <h5 class="card-title mb-0"> Recharage Cards      <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#createModalgrid">
+                <h5 class="card-title mb-0"> Recharage Cards <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#createModalgrid">
                     Create
                     </button>
 

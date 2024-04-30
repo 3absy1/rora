@@ -1,6 +1,6 @@
 @extends('main.master')
 @section('title')
-@lang('translation.analytics')
+Home
 @endsection
 @section('css')
 

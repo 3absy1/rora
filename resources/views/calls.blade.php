@@ -1,5 +1,5 @@
 @extends('main.master')
-@section('title') @lang('translation.datatables') @endsection
+@section('title')Call  @endsection
 @section('css')
 <!--datatable css-->
 <link href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" rel="stylesheet" type="text/css" />
