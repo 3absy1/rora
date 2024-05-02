@@ -20,17 +20,7 @@ Analytics
 @endcomponent
 
 <div class="row">
-    <div class="col-12">
-        <div class="card">
-            <div class="card-header">
-                <h4 class="card-title mb-0">Basic Bar Chart</h4>
-            </div><!-- end card header -->
 
-            <div class="card-body">
-                <div id="bar_chart" data-colors='["--tb-success"]' class="apex-charts" dir="ltr"></div>
-            </div><!-- end card-body -->
-        </div><!-- end card -->
-    </div>
     <div class="col-xl-3 col-sm-6">
         <div class="card">
             <div class="card-body">
@@ -39,26 +29,14 @@ Analytics
                 <div class="row mt-4 align-items-end">
                     <div class="col-lg-6">
                         <h3 class="mb-4"><span class="counter-value" data-target=" {{count($clients)}}"> 0</span> client </h3>
+                        <div class="progress progress-sm rounded-0" role="progressbar" aria-valuenow="49" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar bg-success" style="width: {{count($clients)}}%"></div>
+                        </div>
                     </div>
-                              <div class="col-lg-6">
-                        <div id="visti_duration_chart" data-colors='["--tb-primary", "--tb-secondary"]' class="apex-charts m-n3 mt-n4" dir="ltr"></div>
                     </div>
-                    <div class="d-flex align-items-center gap-2">
-                            @if (count($clients) > $previousCount )
-                            <h5 class="text-success fs-xs mb-0">
-                            <i class="ri-arrow-right-up-line fs-sm align-middle"></i> {{$previousCount}}
-                            @else
-                            <h5 class="text-danger fs-xs mb-0">
-                            <i class="ri-arrow-right-down-line fs-sm align-middle"></i> {{$previousCount}}
-                            @endif
-                        </h5>
-                        <p class="text-muted mb-0">than tomorrow</p>
-                    </div>
-
                 </div>
             </div>
         </div>
-    </div>
     <!--end col-->
     <div class="col-xl-3 col-sm-6">
         <div class="card">
@@ -70,18 +48,9 @@ Analytics
                         <h4 class="mb-4"><span class="counter-value" data-target=" {{count($sims)}}"> 0 </span> Sim Card </h4>
                         {{-- <p class="text-success mb-0"><i class="bi bi-arrow-up me-1"></i> 13% Last Month</p> --}}
                     </div>
-                    <div class="d-flex align-items-center gap-2">
-                        @if (count($sims) > $previousCount )
-                        <h5 class="text-success fs-xs mb-0">
-                        <i class="ri-arrow-right-up-line fs-sm align-middle"></i> {{$previousCount}}
-                        @else
-                        <h5 class="text-danger fs-xs mb-0">
-                        <i class="ri-arrow-right-down-line fs-sm align-middle"></i> {{$previousCount}}
-                        @endif
-                    </h5>
-                    <p class="text-muted mb-0">than tomorrow</p>
-                </div>
-                    {{-- <div class="col-lg-6">
+                    <div class="progress progress-sm rounded-0" role="progressbar" aria-valuenow="49" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar bg-success" style="width: {{count($sims)}}%"></div>
+                    </div>                    {{-- <div class="col-lg-6">
                         <div id="visti_duration_chart" data-colors='["--tb-primary", "--tb-secondary"]' class="apex-charts m-n3 mt-n4" dir="ltr"></div>
                     </div> --}}
                 </div>
@@ -154,17 +123,9 @@ Analytics
                         <h4 class="mb-4"><span class="counter-value" data-target="{{count($calls)}}">0</span> call</h4>
                         {{-- <p class="text-danger mb-0"><i class="bi bi-arrow-down me-1"></i> 07.26% Last Week</p> --}}
                     </div>
-                    <div class="d-flex align-items-center gap-2">
-                        @if (count($calls) > $previousCount )
-                        <h5 class="text-success fs-xs mb-0">
-                        <i class="ri-arrow-right-up-line fs-sm align-middle"></i> {{$previousCount}}
-                        @else
-                        <h5 class="text-danger fs-xs mb-0">
-                        <i class="ri-arrow-right-down-line fs-sm align-middle"></i> {{$previousCount}}
-                        @endif
-                    </h5>
-                    <p class="text-muted mb-0">than tomorrow</p>
-                </div>
+                    <div class="progress progress-sm rounded-0" role="progressbar" aria-valuenow="49" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar bg-success" style="width: {{count($calls)}}%"></div>
+                    </div>
                     {{-- <div class="col-lg-6">
                         <div id="impressions_chart" data-colors='["--tb-secondary"]' class="apex-charts m-n3 mt-n4" dir="ltr"></div>
                     </div> --}}
@@ -183,17 +144,9 @@ Analytics
                         <h4 class="mb-4"><span class="counter-value" data-target="{{count($reviews)}}">0</span> review </h4>
                         {{-- <p class="text-success mb-0"><i class="bi bi-arrow-up me-1"></i> 13% Last Month</p> --}}
                     </div>
-                    <div class="d-flex align-items-center gap-2">
-                        @if (count($reviews) > $previousCount )
-                        <h5 class="text-success fs-xs mb-0">
-                        <i class="ri-arrow-right-up-line fs-sm align-middle"></i> {{$previousCount}}
-                        @else
-                        <h5 class="text-danger fs-xs mb-0">
-                        <i class="ri-arrow-right-down-line fs-sm align-middle"></i> {{$previousCount}}
-                        @endif
-                    </h5>
-                    <p class="text-muted mb-0">than tomorrow</p>
-                </div>
+                    <div class="progress progress-sm rounded-0" role="progressbar" aria-valuenow="49" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar bg-success" style="width: {{count($reviews)}}%"></div>
+                    </div>
                     {{-- <div class="col-lg-6">
                         <div id="views_chart" data-colors='["--tb-primary"]' class="apex-charts m-n3 mt-n4" dir="ltr"></div>
                     </div> --}}
@@ -227,37 +180,21 @@ Analytics
         </div>
     </div> --}}
     <!--end col-->
-    <div class="col-xl-3 col-sm-6">
-        <div class="card">
-            <div class="card-body">
-                <p class="fs-md text-muted mb-0">Credit Transactions</p>
 
-                <div class="row mt-4 align-items-end">
-                    <div class="col-lg-6">
-                        <h3 class="mb-4"><span class="counter-value" data-target="{{count($creditTransactions)}}">0</span>        credit </h3>
-                        {{-- <p class="text-success mb-0"><i class="bi bi-arrow-up me-1"></i> 13% Last Month</p> --}}
-                    </div>
-                    <div class="d-flex align-items-center gap-2">
-                        @if (count($creditTransactions) > $previousCount )
-                        <h5 class="text-success fs-xs mb-0">
-                        <i class="ri-arrow-right-up-line fs-sm align-middle"></i> {{$previousCount}}
-                        @else
-                        <h5 class="text-danger fs-xs mb-0">
-                        <i class="ri-arrow-right-down-line fs-sm align-middle"></i> {{$previousCount}}
-                        @endif
-                    </h5>
-                    <p class="text-muted mb-0">than tomorrow</p>
-                </div>
-                    {{-- <div class="col-lg-6">
-                        <div id="views_chart" data-colors='["--tb-primary"]' class="apex-charts m-n3 mt-n4" dir="ltr"></div>
-                    </div> --}}
-                </div>
+</div>
+<!--end row-->
+<div class="row">
+    <div class="col-xl-12">
+        <div class="card card-height-250">
+            {!! $chart->container() !!}
+
+            <div class="card-header d-flex align-items-center">
+
+
             </div>
         </div>
     </div>
 </div>
-<!--end row-->
-
 <div class="row">
     <div class="col-xl-4">
         <div class="card card-height-100" id="networks">
@@ -436,16 +373,16 @@ Analytics
 <!--end row-->
 
 <div class="row">
-    <div class="col-xl-9">
-        <div class="card card-height-100">
+    <div class="col-xl-4">
+        <div class="card card-height-250">
+            {!! $home->container() !!}
+
             <div class="card-header d-flex align-items-center">
-                <h5 class="card-title mb-0 flex-grow-1">Active Clients Right Now</h5>
-                <div class="flex-shrink-0">
-                    <button type="button" class="btn btn-subtle-primary btn-sm"><i class="bi bi-file-earmark-text me-1 align-baseline"></i> Reports</button>
-                </div>
+
+
             </div>
             <!--end card-header-->
-            <div class="card-body">
+            {{-- <div class="card-body">
                 <div class="row">
                     <div class="col-lg-6">
                         <div id="world-map-line-markers" data-colors='["--tb-light"]' style="height: 340px"></div>
@@ -460,10 +397,10 @@ Analytics
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div><!-- /col-->
-    <div class="col-xl-3">
+    <div class="col-xl-4">
         <div class="card card-height-100" id="top-Pages">
             <div class="card-header d-flex align-items-center">
                 <h5 class="card-title mb-0 flex-grow-1">Client Payment</h5>
@@ -506,256 +443,7 @@ Analytics
             </div>
         </div>
     </div><!-- end col-->
-</div><!-- end row-->
-
-<div class="row">
     <div class="col-xl-4">
-        <div class="card card-height-100 border-0 overflow-hidden">
-            <div class="card-body p-0">
-                <div class="row g-0">
-                    <div class="col-md-6">
-                        <!-- card -->
-                        <div class="card shadow-none border-end-md border-bottom rounded-0 mb-0">
-                            <div class="card-body">
-                                <div class="dropdown float-end">
-                                    <a class="text-reset dropdown-btn" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <span class="text-muted fs-lg"><i class="mdi mdi-dots-vertical align-middle"></i></span>
-                                    </a>
-                                    <div class="dropdown-menu dropdown-menu-end">
-                                        <a class="dropdown-item" href="#">Today</a>
-                                        <a class="dropdown-item" href="#">Last Week</a>
-                                        <a class="dropdown-item" href="#">Last Month</a>
-                                        <a class="dropdown-item" href="#">Current Year</a>
-                                    </div>
-                                </div>
-                                <div id="time_On_Sale" data-colors='["--tb-primary"]' dir="ltr"></div>
-                                <div class="mt-2">
-                                    <p class="text-uppercase fw-medium text-muted text-truncate fs-sm">Time on Sale</p>
-                                    <h4 class="fw-semibold mb-3"><span class="counter-value" data-target="32">0</span>M <span class="counter-value" data-target="12">0</span>s</h4>
-                                    <div class="d-flex align-items-center gap-2">
-                                        <h5 class="text-success flex-shrink-0 fs-xs mb-0">
-                                            <i class="ri-arrow-right-up-line fs-sm align-middle"></i> +21.36 %
-                                        </h5>
-                                        <div class="flex-grow-1 overflow-hidden">
-                                            <p class="text-muted text-truncate mb-0">Analytics for last week</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div><!-- end card body -->
-                        </div><!-- end card -->
-                    </div><!-- end col -->
-                    <div class="col-md-6">
-                        <!-- card -->
-                        <div class="card shadow-none border-bottom rounded-0 mb-0">
-                            <div class="card-body">
-                                <div class="dropdown float-end">
-                                    <a class="text-reset dropdown-btn" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <span class="text-muted fs-lg"><i class="mdi mdi-dots-vertical align-middle"></i></span>
-                                    </a>
-                                    <div class="dropdown-menu dropdown-menu-end">
-                                        <a class="dropdown-item" href="#">Today</a>
-                                        <a class="dropdown-item" href="#">Last Week</a>
-                                        <a class="dropdown-item" href="#">Last Month</a>
-                                        <a class="dropdown-item" href="#">Current Year</a>
-                                    </div>
-                                </div>
-                                <div id="goal_Completions" data-colors='["--tb-dark"]' dir="ltr"></div>
-                                <div class="mt-2">
-                                    <p class="text-uppercase fw-medium text-muted text-truncate fs-sm">Goal Completions</p>
-                                    <h4 class="fw-semibold mb-3"><span class="counter-value" data-target="254157">0</span></h4>
-                                    <div class="d-flex align-items-center gap-2">
-                                        <h5 class="text-success flex-shrink-0 fs-xs mb-0">
-                                            <i class="ri-arrow-right-up-line fs-sm align-middle"></i> +6.30 %
-                                        </h5>
-                                        <div class="flex-grow-1 overflow-hidden">
-                                            <p class="text-muted text-truncate mb-0">Analytics for last week</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div><!-- end card body -->
-                        </div><!-- end card -->
-                    </div><!-- end col -->
-                    <div class="col-md-6">
-                        <!-- card -->
-                        <div class="card shadow-none border-end-md rounded-0 mb-0">
-                            <div class="card-body">
-                                <div class="dropdown float-end">
-                                    <a class="text-reset dropdown-btn" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <span class="text-muted fs-lg"><i class="mdi mdi-dots-vertical align-middle"></i></span>
-                                    </a>
-                                    <div class="dropdown-menu dropdown-menu-end">
-                                        <a class="dropdown-item" href="#">Today</a>
-                                        <a class="dropdown-item" href="#">Last Week</a>
-                                        <a class="dropdown-item" href="#">Last Month</a>
-                                        <a class="dropdown-item" href="#">Current Year</a>
-                                    </div>
-                                </div>
-                                <div id="bounce_rate" data-colors='["--tb-danger"]' dir="ltr"></div>
-                                <div class="mt-2">
-                                    <p class="text-uppercase fw-medium text-muted text-truncate fs-sm">Bounce Rate</p>
-                                    <h4 class="fw-semibold mb-3"><span class="counter-value" data-target="68">0</span>%</h4>
-                                    <div class="d-flex align-items-center gap-2">
-                                        <h5 class="text-danger flex-shrink-0 fs-xs mb-0">
-                                            <i class="ri-arrow-right-down-line fs-sm align-middle"></i> +2.01 %
-                                        </h5>
-                                        <div class="flex-grow-1 overflow-hidden">
-                                            <p class="text-muted text-truncate mb-0">Analytics for last week</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div><!-- end card body -->
-                        </div><!-- end card -->
-                    </div><!-- end col -->
-                    <div class="col-md-6">
-                        <!-- card -->
-                        <div class="card shadow-none border-top border-top-md-0 rounded-0 mb-0">
-                            <div class="card-body">
-                                <div class="dropdown float-end">
-                                    <a class="text-reset dropdown-btn" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <span class="text-muted fs-lg"><i class="mdi mdi-dots-vertical align-middle"></i></span>
-                                    </a>
-                                    <div class="dropdown-menu dropdown-menu-end">
-                                        <a class="dropdown-item" href="#">Today</a>
-                                        <a class="dropdown-item" href="#">Last Week</a>
-                                        <a class="dropdown-item" href="#">Last Month</a>
-                                        <a class="dropdown-item" href="#">Current Year</a>
-                                    </div>
-                                </div>
-                                <div id="new_Sessions" data-colors='["--tb-info"]' dir="ltr"></div>
-                                <div class="mt-2">
-                                    <p class="text-uppercase fw-medium text-muted text-truncate fs-sm">New Sessions</p>
-                                    <h4 class="fw-semibold mb-3"><span class="counter-value" data-target="32548">0</span> </h4>
-                                    <div class="d-flex align-items-center gap-2">
-                                        <h5 class="text-success flex-shrink-0 fs-xs mb-0">
-                                            <i class="ri-arrow-right-up-line fs-sm align-middle"></i> +10.42 %
-                                        </h5>
-                                        <div class="flex-grow-1 overflow-hidden">
-                                            <p class="text-muted text-truncate mb-0">than last week</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div><!-- end card body -->
-                        </div><!-- end card -->
-                    </div><!-- end col -->
-                </div> <!-- end row-->
-            </div>
-        </div>
-    </div>
-    <!--end col-->
-    {{-- <div class="col-xl-4">
-        <div class="card card-height-100">
-            <div class="card-header d-flex align-items-center">
-                <h5 class="card-title mb-0 flex-grow-1">Sales Report</h5>
-                <div class="flex-shrink-0">
-                    <button type="button" class="btn btn-subtle-info btn-sm"><i class="bi bi-file-earmark-text me-1 align-baseline"></i> Generate Reports</button>
-                </div>
-            </div>
-            <div class="card-body pb-0">
-                <h4>$<span class="counter-value" data-target="452.32"></span>M <span class="text-success fw-normal fs-sm"><i class="bi bi-arrow-up"></i> +23.57%</span></h4>
-                <p class="text-muted mb-0">($215.32 Avg. revenue monthly)</p>
-            </div>
-            <div class="card-body pt-0 pb-2 ps-0 mt-2 mt-lg-n3 sales-report-chart">
-                <div id="sales_Report" data-colors='["--tb-primary", "--tb-secondary"]' class="apex-charts" dir="ltr"></div>
-            </div>
-        </div>
-    </div> --}}
-    <!--end col-->
-    <div class="col-xl-4">
-        <div class="card card-height-100">
-            <div class="card-header d-flex align-items-center">
-                <h5 class="card-title mb-0 flex-grow-1">Earning</h5>
-                <div class="dropdown card-header-dropdown">
-                    <a class="text-reset dropdown-btn" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <span class="text-muted fs-lg"><i class="mdi mdi-dots-vertical align-middle"></i></span>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-end">
-                        <a class="dropdown-item" href="#">Current Years</a>
-                        <a class="dropdown-item" href="#">Last Years</a>
-                    </div>
-                </div>
-            </div>
-            <div class="card-body">
-                <div class="p-3 text-center bg-light-subtle mb-4 rounded">
-                    <h4 class="mb-0">$<span class="counter-value" data-target="314.57"></span>M <span class="text-muted fw-normal fs-sm"><span class="text-success fw-medium"><i class="bi bi-arrow-up"></i> +23.57%</span> Last Month</span></h4>
-                </div>
-                <div class="progress progress-bar-animated">
-                    <div class="progress-bar" role="progressbar" data-bs-toggle="tooltip" data-bs-title="Product Development (28%)" style="width: 28%" aria-valuenow="28" aria-valuemin="0" aria-valuemax="100"></div>
-                    <div class="progress-bar bg-secondary" role="progressbar" data-bs-toggle="tooltip" data-bs-title="Startup Business (15%)" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
-                    <div class="progress-bar bg-info" role="progressbar" data-bs-toggle="tooltip" data-bs-title="Corporate Design (20%)" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                    <div class="progress-bar bg-light" role="progressbar" data-bs-toggle="tooltip" data-bs-title="Develop Project (18%)" style="width: 18%" aria-valuenow="18" aria-valuemin="0" aria-valuemax="100"></div>
-                    <div class="progress-bar bg-success" role="progressbar" data-bs-toggle="tooltip" data-bs-title="Prototype (13%)" style="width: 13%" aria-valuenow="13" aria-valuemin="0" aria-valuemax="100"></div>
-                    <div class="progress-bar bg-warning" role="progressbar" data-bs-toggle="tooltip" data-bs-title="Design (8%)" style="width: 8%" aria-valuenow="8" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <ul class="list-unstyled mt-4 pt-2 vstack gap-3">
-                    <li>
-                        <div class="d-flex align-items-center">
-                            <div class="flex-grow-1">
-                                <i class="bi bi-circle-square text-primary me-2"></i> Product Development
-                            </div>
-                            <div class="flex-shrink-0">
-                                28%
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="d-flex align-items-center">
-                            <div class="flex-grow-1">
-                                <i class="bi bi-circle-square text-secondary me-2"></i> Startup Business
-                            </div>
-                            <div class="flex-shrink-0">
-                                15%
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="d-flex align-items-center">
-                            <div class="flex-grow-1">
-                                <i class="bi bi-circle-square text-info me-2"></i> Corporate Design
-                            </div>
-                            <div class="flex-shrink-0">
-                                20%
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="d-flex align-items-center">
-                            <div class="flex-grow-1">
-                                <i class="bi bi-circle-square text-light me-2"></i> Develop Project
-                            </div>
-                            <div class="flex-shrink-0">
-                                18%
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="d-flex align-items-center">
-                            <div class="flex-grow-1">
-                                <i class="bi bi-circle-square text-success me-2"></i> Prototype
-                            </div>
-                            <div class="flex-shrink-0">
-                                13%
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="d-flex align-items-center">
-                            <div class="flex-grow-1">
-                                <i class="bi bi-circle-square text-warning me-2"></i> Design
-                            </div>
-                            <div class="flex-shrink-0">
-                                8%
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-                <div class="text-center">
-                    <a href="#!" class="link-secondary fw-medium link-effect">View All Earning <i class="bi bi-arrow-right align-baseline ms-1"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--end col-->
-    <div id="call" class="col-xl-3">
         <div class="card card-height-100" id="top-Pages">
             <div class="card-header d-flex align-items-center">
                 <h5 class="card-title mb-0 flex-grow-1">Client Request</h5>
@@ -781,7 +469,6 @@ Analytics
                                 <th scope="col" class="sort cursor-pointer" data-sort="activePageNo">User 1</th>
                                 <th scope="col" class="sort cursor-pointer" data-sort="activePageNo">User 2</th>
                                 <th scope="col" class="sort cursor-pointer" data-sort="activePageNo">Status</th>
-
                             </tr>
                         </thead>
                         <tbody class="list">
@@ -797,6 +484,7 @@ Analytics
 
                             </tr><!-- end -->
 
+
                             @endforeach
                         </tbody><!-- end tbody -->
                     </table><!-- end table -->
@@ -804,11 +492,48 @@ Analytics
             </div>
         </div>
     </div><!-- end col-->
+
+<div class="row">
+
+    <!--end col-->
+    {{-- <div class="col-xl-4">
+        <div class="card card-height-100">
+            <div class="card-header d-flex align-items-center">
+                <h5 class="card-title mb-0 flex-grow-1">Sales Report</h5>
+                <div class="flex-shrink-0">
+                    <button type="button" class="btn btn-subtle-info btn-sm"><i class="bi bi-file-earmark-text me-1 align-baseline"></i> Generate Reports</button>
+                </div>
+            </div>
+            <div class="card-body pb-0">
+                <h4>$<span class="counter-value" data-target="452.32"></span>M <span class="text-success fw-normal fs-sm"><i class="bi bi-arrow-up"></i> +23.57%</span></h4>
+                <p class="text-muted mb-0">($215.32 Avg. revenue monthly)</p>
+            </div>
+            <div class="card-body pt-0 pb-2 ps-0 mt-2 mt-lg-n3 sales-report-chart">
+                <div id="sales_Report" data-colors='["--tb-primary", "--tb-secondary"]' class="apex-charts" dir="ltr"></div>
+            </div>
+        </div>
+    </div> --}}
+    <!--end col-->
+
+    <!--end col-->
+
 </div>
 <!--end row-->
 
 @endsection
 @section('script')
+<script src="{{ $chart->cdn() }}"></script>
+<script src="{{ $simcard->cdn() }}"></script>
+<script src="{{ $call->cdn() }}"></script>
+<script src="{{ $review->cdn() }}"></script>
+<script src="{{ $home->cdn() }}"></script>
+
+{{ $chart->script() }}
+{{ $simcard->script() }}
+{{ $call->script() }}
+{{ $review->script() }}
+{{ $home->script() }}
+
 <!-- apexcharts -->
 <script src="{{ URL::asset('build/libs/apexcharts/apexcharts.min.js') }}"></script>
 <script src="{{ URL::asset('build/libs/echarts/echarts.min.js') }}"></script>

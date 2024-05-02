@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Charts\CallChart;
 use App\Models\Call;
 use App\Models\Home;
 use App\Models\Plans;
@@ -10,21 +11,24 @@ use App\Models\Orders;
 use App\Models\Reviews;
 use App\Models\SimsCard;
 use Flowframe\Trend\Trend;
+use App\Charts\ClientChart;
+use App\Charts\homeChart;
+use App\Charts\reviewChart;
+use App\Charts\SimCardChart;
 use App\Models\CallRequest;
 use Illuminate\Http\Request;
 use App\Models\ClientPayment;
 use App\Models\Recharagecard;
 use App\Models\Subscribtions;
+use Flowframe\Trend\TrendValue;
 use App\Models\RecharageRequest;
 use App\Models\CreditTransaction;
-use Flowframe\Trend\TrendValue;
 
 class HomeController extends Controller
 {
-    public function index()
+    public function index(ClientChart $chart,SimCardChart $simcard, CallChart $call, reviewChart $review,homeChart $home)
     {
         $previousCount = $this->getPreviousClientCount();
-
         return view('home',[
             'sims' => SimsCard::all(),
             'clients' => Client::all(),
@@ -39,6 +43,11 @@ class HomeController extends Controller
             'clientPayments' => ClientPayment::all(),
             'callRequests' => CallRequest::all(),
             'previousCount' => $previousCount ,
+            'chart' => $chart->build(),
+            'simcard' => $simcard->build(),
+            'call' => $call->build(),
+            'review' => $review->build(),
+            'home' => $home->build(),
 
 
         ]);
@@ -53,30 +62,5 @@ class HomeController extends Controller
         return $previousCount;
     }
 
-    public function getData()
-    {
-        // $client= Client::all()->where('client_id',auth()->user()->id);
-        // // $call= Call
 
-                // Totals per month
-                $data = Trend::model(Client::class)
-                ->between(
-                    start: now()->startOfWeek(),
-                    end: now()->endOfWeek(),
-                )
-                ->perDay()
-                ->count();
-
-                return [
-                    'datasets' =>[
-                        [
-                        'label' => 'chart',
-                        'data' => $data->map(fn (TrendValue $value)=> $value->aggregate),
-                        'borderColor' => '#36A2EB',
-                        ],
-                    ],
-                    'label' => ['Sun','Mon','Thu','Wen','Tue','Fri','Sat'],
-                ];
-
-    }
 }
