@@ -26,7 +26,7 @@ use App\Models\CreditTransaction;
 
 class HomeController extends Controller
 {
-    public function index(ClientChart $chart,SimCardChart $simcard, CallChart $call, reviewChart $review,homeChart $home)
+    public function index(ClientChart $chart,homeChart $home)
     {
         $previousCount = $this->getPreviousClientCount();
         return view('home',[
@@ -44,9 +44,6 @@ class HomeController extends Controller
             'callRequests' => CallRequest::all(),
             'previousCount' => $previousCount ,
             'chart' => $chart->build(),
-            'simcard' => $simcard->build(),
-            'call' => $call->build(),
-            'review' => $review->build(),
             'home' => $home->build(),
 
 

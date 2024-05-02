@@ -5,7 +5,6 @@ Home
 @section('css')
 
 
-
 <link href="{{ URL::asset('build/libs/jsvectormap/css/jsvectormap.min.css') }}" rel="stylesheet">
 
 @endsection
@@ -523,15 +522,9 @@ Analytics
 @endsection
 @section('script')
 <script src="{{ $chart->cdn() }}"></script>
-<script src="{{ $simcard->cdn() }}"></script>
-<script src="{{ $call->cdn() }}"></script>
-<script src="{{ $review->cdn() }}"></script>
 <script src="{{ $home->cdn() }}"></script>
 
 {{ $chart->script() }}
-{{ $simcard->script() }}
-{{ $call->script() }}
-{{ $review->script() }}
 {{ $home->script() }}
 
 <!-- apexcharts -->
