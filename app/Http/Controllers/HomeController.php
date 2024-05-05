@@ -30,14 +30,14 @@ class HomeController extends Controller
     {
         $previousCount = $this->getPreviousClientCount();
         return view('home',[
-            'sims' => SimsCard::all(),
-            'clients' => Client::all(),
+            'sims' => SimsCard::count(),
+            'clients' => Client::count(),
             'plans' => Plans::all(),
-            'subscribtions' => Subscribtions::all(),
-            'calls' => Call::all(),
-            'reviews' => Reviews::all(),
-            'orders' => Orders::all(),
-            'creditTransactions' => CreditTransaction::all(),
+            'subscribtions' => Subscribtions::count(),
+            'calls' => Call::count(),
+            'reviews' => Reviews::count(),
+            'orders' => Orders::count(),
+            'creditTransactions' => CreditTransaction::count(),
             'recharagecards' => Recharagecard::all(),
             'recharageRequests' => RecharageRequest::all(),
             'clientPayments' => ClientPayment::all(),

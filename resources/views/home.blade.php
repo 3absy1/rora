@@ -27,9 +27,9 @@ Analytics
 
                 <div class="row mt-4 align-items-end">
                     <div class="col-lg-6">
-                        <h3 class="mb-4"><span class="counter-value" data-target=" {{count($clients)}}"> 0</span> client </h3>
+                        <h3 class="mb-4"><span class="counter-value" data-target=" {{$clients}}"> 0</span> client </h3>
                         <div class="progress progress-sm rounded-0" role="progressbar" aria-valuenow="49" aria-valuemin="0" aria-valuemax="100">
-                            <div class="progress-bar bg-success" style="width: {{count($clients)}}%"></div>
+                            <div class="progress-bar bg-success" style="width: {{$clients}}%"></div>
                         </div>
                     </div>
                     </div>
@@ -44,11 +44,11 @@ Analytics
 
                 <div class="row mt-4 align-items-end">
                     <div class="col-lg-6">
-                        <h4 class="mb-4"><span class="counter-value" data-target=" {{count($sims)}}"> 0 </span> Sim Card </h4>
+                        <h4 class="mb-4"><span class="counter-value" data-target=" {{$sims}}"> 0 </span> Sim Card </h4>
                         {{-- <p class="text-success mb-0"><i class="bi bi-arrow-up me-1"></i> 13% Last Month</p> --}}
                     </div>
                     <div class="progress progress-sm rounded-0" role="progressbar" aria-valuenow="49" aria-valuemin="0" aria-valuemax="100">
-                        <div class="progress-bar bg-success" style="width: {{count($sims)}}%"></div>
+                        <div class="progress-bar bg-success" style="width: {{$sims}}%"></div>
                     </div>                    {{-- <div class="col-lg-6">
                         <div id="visti_duration_chart" data-colors='["--tb-primary", "--tb-secondary"]' class="apex-charts m-n3 mt-n4" dir="ltr"></div>
                     </div> --}}
@@ -119,11 +119,11 @@ Analytics
 
                 <div class="row mt-4 align-items-end">
                     <div class="col-lg-6">
-                        <h4 class="mb-4"><span class="counter-value" data-target="{{count($calls)}}">0</span> call</h4>
+                        <h4 class="mb-4"><span class="counter-value" data-target="{{$calls}}">0</span> call</h4>
                         {{-- <p class="text-danger mb-0"><i class="bi bi-arrow-down me-1"></i> 07.26% Last Week</p> --}}
                     </div>
                     <div class="progress progress-sm rounded-0" role="progressbar" aria-valuenow="49" aria-valuemin="0" aria-valuemax="100">
-                        <div class="progress-bar bg-success" style="width: {{count($calls)}}%"></div>
+                        <div class="progress-bar bg-success" style="width: {{$calls}}%"></div>
                     </div>
                     {{-- <div class="col-lg-6">
                         <div id="impressions_chart" data-colors='["--tb-secondary"]' class="apex-charts m-n3 mt-n4" dir="ltr"></div>
@@ -140,11 +140,11 @@ Analytics
 
                 <div class="row mt-4 align-items-end">
                     <div class="col-lg-6">
-                        <h4 class="mb-4"><span class="counter-value" data-target="{{count($reviews)}}">0</span> review </h4>
+                        <h4 class="mb-4"><span class="counter-value" data-target="{{$reviews}}">0</span> review </h4>
                         {{-- <p class="text-success mb-0"><i class="bi bi-arrow-up me-1"></i> 13% Last Month</p> --}}
                     </div>
                     <div class="progress progress-sm rounded-0" role="progressbar" aria-valuenow="49" aria-valuemin="0" aria-valuemax="100">
-                        <div class="progress-bar bg-success" style="width: {{count($reviews)}}%"></div>
+                        <div class="progress-bar bg-success" style="width: {{$reviews}}%"></div>
                     </div>
                     {{-- <div class="col-lg-6">
                         <div id="views_chart" data-colors='["--tb-primary"]' class="apex-charts m-n3 mt-n4" dir="ltr"></div>
