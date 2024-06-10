@@ -1,4 +1,16 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+
+![Screenshot 2024-06-10 232232](https://github.com/3absy1/rora/assets/102052336/9b690dad-2a60-4781-80ce-954922d3173d)
+
+![Screenshot 2024-06-10 232325](https://github.com/3absy1/rora/assets/102052336/ee0ccea4-2318-4ff7-9bb0-ea09762aa67a)
+
+![Screenshot 2024-06-10 232416](https://github.com/3absy1/rora/assets/102052336/4317fd15-96a0-4883-9036-9e94b51936ed)
+
+![Screenshot 2024-06-10 232508](https://github.com/3absy1/rora/assets/102052336/b49b8de6-a571-4f5c-abbd-3bbee1b3bce0)
+
+
+
+<p align="ce![Uploading Screenshot 2024-06-10 232508.png…]()
+nter"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
 <a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
